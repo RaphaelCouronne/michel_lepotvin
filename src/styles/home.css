@@ -1,0 +1,74 @@
+:root {
+  --font-mono: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono',
+    'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
+  --color-light: #f3f4f6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-light: #1f2937;
+  }
+}
+
+a {
+  color: inherit;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-width: min(100%, 68ch);
+}
+
+header {
+  font-size: clamp(2rem, -0.4742rem + 6.1856vw, 2.75rem);
+  padding: 1em 0;
+  margin-bottom: .5em;
+}
+
+header > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1em;
+  font-weight: 500;
+  margin: 0;
+}
+header img {
+  width: 2em;
+  height: 2.667em;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: clamp(1.5rem, 1rem + 1.25vw, 2rem);
+}
+
+.container {
+  width: 100%;
+  max-width: 1024px;
+  padding: 0 1em;
+  margin: 0 auto;
+}
+
+.images {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 3em;
+}
+
+.imageTitle {
+  font-size: 1.4em;
+  margin: .4em 0 0;
+}
+
+.imageImage > div {
+  display: block!important;
+}

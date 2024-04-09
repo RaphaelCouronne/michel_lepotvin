@@ -1,0 +1,14 @@
+---
+const { title, artist, image, description } = Astro.props;
+---
+
+<article class="painting-card">
+  <h2>{title}</h2>
+  <p>{artist}</p>
+  <img src={image} alt={`${title} by ${artist}`} />
+  <p>{description}</p>
+</article>
+
+
+
+
