@@ -8,6 +8,8 @@
 - check if blurry images
 - dynamic selection of images according to criterias (and match in .json e.g. corsica, ...)
 - generation of images in the style of the author
+- Machine learning component : 
+    - Add GIF of NERFs around the vase
 
 
 
