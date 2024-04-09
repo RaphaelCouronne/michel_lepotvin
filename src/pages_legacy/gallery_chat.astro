@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PaintingCard from '../components/legacy/PaintingCard.astro';
+
+const paintings = [
+  {
+    title: 'Painting 1',
+    artist: 'Artist 1',
+    image: '../content/albums/breizh/GOPR0147.JPG',
+    description: 'Description for painting 1'
+  },
+  // Add more paintings as needed
+];
+---
+
+<BaseLayout title="Paintings Gallery">
+  <main>
+    <h1>Paintings Gallery</h1>
+    <div class="paintings-grid">
+      {paintings.map((painting) => (
+        <PaintingCard
+          title={painting.title}
+          artist={painting.artist}
+          image={painting.image}
+          description={painting.description}
+        />
+      ))}
+    </div>
+  </main>
+</BaseLayout>
