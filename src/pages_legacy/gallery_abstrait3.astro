@@ -1,0 +1,66 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection } from "astro:content";
+
+const allPaintingsMetadata = await getCollection("paintings");
+const allBlogs= await getCollection("blog");
+
+const images = import.meta.glob("../content/paintings/abstrait/*");
+
+
+---
+
+
+
+{
+  allPaintingsMetadata.map((painting_metadata) => (
+    <div>
+      <Image src={images["../content/paintings/abs-12.png"]()} alt={painting_metadata.data.coverAlt} width="600"/>
+    </div>
+    <li> {painting_metadata.data.cover} </li>
+  ))
+}
+
+
+
+<!-- 
+{
+  allPaintingsMetadata.map((painting_metadata) => (
+    <div>
+      <Image src={painting_metadata.data.cover} alt={painting_metadata.data.description} width="600"/>
+    </div>
+  ))
+}
+-->
+
+<!-- 
+  <div class="p-8">
+    <h1 class="text-5xl font-bold text-center my-8">Gallery</h1>
+    <div class="mx-auto container max-w-screen-sm grid grid-cols-2 gap-8">
+      {
+        paintings.map((item) => (
+          <a
+            href={`/gallery/${item.id}`}
+            class="group transition-all mb-4 block"
+          >
+            <Image
+              src={item.data.cover}
+              alt={item.data.title}
+              format="avif"
+              width={720}
+              quality="mid"
+              class:list={[
+                "rounded-lg transition-all",
+                "group-hover:shadow-lg group-hover:opacity-90"
+              ]}
+            />
+            <div class="mt-4 text-center text-neutral-700">
+              <strong class="font-normal">{item.data.title}</strong>
+              <p class="text-xs">{item.data.description}</p>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+  -->

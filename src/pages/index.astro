@@ -1,7 +1,23 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Michel Lepotvin";
+
+import { Image } from 'astro:assets';
+import myImage1 from  "../content/paintings/abstrait/abs-12.png";
+import myImage2 from  "../content/paintings/paysages/Baou-18.jpg";
 ---
 <BaseLayout pageTitle={pageTitle}>
   <h2> Peintures </h2>
+
+    <div>  
+      <Image src= {myImage1} alt="" width="400" /> 
+      <a href={"/gallery_abstrait"}>{"Abstrait"}</a>
+    </div>
+
+    <div>  
+      <Image src= {myImage2} alt="" width="400" />
+      <a href={"/gallery_paysages"}>{"Paysages"}</a>
+    </div>
+
+
 </BaseLayout>

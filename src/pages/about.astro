@@ -12,6 +12,12 @@ const identity = {
 const skills = ["Peintre", "Photographe", "Dessinateur publicitaire", "Ecrivain"];
 
 const skillColor = "navy";
+
+import photo_michel from "../content/paintings/autre/moi.jpg";
+import photo_expo1 from "../content/paintings/autre/premiere_expo.jpg";
+
+import { Image } from 'astro:assets';
+
 ---
 <BaseLayout pageTitle={pageTitle}>
 
@@ -21,13 +27,14 @@ const skillColor = "navy";
 
   <p> {identity.firstName} : {identity.occupation}. {identity.country}. </p>
 
-  Michel Lepotvin se passione pour la Corse et le sud de la France, qu'il peint colorés, et ensoleillés.
+  <p>
+    Peintre, photogrpahe, dessinateur publicitaire et écrivain.
+    Michel Lepotvin a peint la Corse et le sud de la France, colorés et ensoleillés.
+  </p>
 
 
-  <p>Occupations :</p>
-  <ul>
-    {skills.map((skill) => <li class="skill">{skill}</li>)}
-  </ul>
 
+  <Image src= {photo_michel} alt="" width="200" />
+  <Image src= {photo_expo1} alt="" width="200" />
 
 </BaseLayout>

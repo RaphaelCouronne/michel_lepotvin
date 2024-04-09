@@ -24,3 +24,6 @@ HELP
 - https://docs.astro.build/en/recipes/dynamically-importing-images/
 
 
+BOF
+- https://medevel.com/astro-gallery/
+
