@@ -5,6 +5,8 @@ const pageTitle = "Michel Lepotvin";
 import { Image } from 'astro:assets';
 import myImage1 from  "../content/paintings/abstrait/abs-12.png";
 import myImage2 from  "../content/paintings/paysages/Baou-18.jpg";
+import myImage3 from  "../content/paintings/1965/Expo 1965 - 2.jpg";
+
 ---
 <BaseLayout pageTitle={pageTitle}>
   <h2> Peintures </h2>
@@ -17,6 +19,11 @@ import myImage2 from  "../content/paintings/paysages/Baou-18.jpg";
     <div>  
       <Image src= {myImage2} alt="" width="400" />
       <a href={"/gallery_paysages"}>{"Paysages"}</a>
+    </div>
+
+    <div>  
+      <Image src= {myImage3} alt="" width="400" />
+      <a href={"/gallery_1965"}>{"1965"}</a>
     </div>
 
 
