@@ -23,7 +23,3 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
-*.JPG
-*.png
-*.bmp
-*.jpeg
