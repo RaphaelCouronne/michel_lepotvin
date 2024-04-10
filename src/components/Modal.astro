@@ -1,0 +1,51 @@
+---
+import { Image } from 'astro:assets';
+
+import myImage4 from  "../content/paintings/fleurs/bouquet- 3.jpg";
+const {paintingName} = Astro.props;
+
+import MyCustomCardComponent from '../components/MyCustomCardComponent.astro';
+---
+
+<div class="absolute h-full w-full bg-zinc-800/70 top-0 bottom-0 z-10 flex items-center justify-center">
+
+
+
+    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+
+        <!--
+        <a href="/galleryv2">
+            <img class="rounded-t-lg" src="../content/paintings/abstrait/abs-12.png" alt="" />
+            <Image src={myImage4} alt="" width="400" /> 
+
+
+
+        </a>
+        -->
+
+
+        <!--                     "../content/paintings/abstrait/abs-12.png/${imgPath}" -->
+
+
+  
+
+        <a href="/galleryv2">
+            <MyCustomCardComponent
+                imagePath={`../content/paintings/abstrait/${paintingName}`} 
+                altText="A headshot of Priya against a brick wall background."
+                name="Priya"
+                age={25}
+        />
+        </a>
+
+        <div class="p-5">  
+            <p> {paintingName}</p>
+        </div>
+
+        
+    </div>
+    
+
+
+
+</div>

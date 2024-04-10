@@ -12,9 +12,16 @@
     - Add GIF of NERFs around the vase
 
 
+# Current source of information
+- https://www.youtube.com/watch?v=WCdMuH-yXAE
+- astro tuto on images
+
 
 React Framework
 - https://www.twicpics.com/blog/using-react-components-within-astro
+
+Templates
+- https://tailwindcss.com/
 
 Inspiration : 
 - https://github.com/AREA44/astro-multiverse
@@ -24,6 +31,8 @@ Inspiration :
 HELP
 - https://stackoverflow.com/questions/75126196/dynamically-import-all-images-from-a-folder-in-astro
 - https://docs.astro.build/en/recipes/dynamically-importing-images/
+- https://stackoverflow.com/questions/75136124/astrojs-can-i-get-a-list-of-all-pages-withing-a-folder Imports
+
 
 
 BOF

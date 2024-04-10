@@ -1,0 +1,66 @@
+---
+import { Image } from 'astro:assets';
+
+
+const imageFiles = await Astro.glob('../content/paintings/abstrait/*');
+
+function extractFileName(filePath) {
+    let separator = filePath.indexOf("/") !== -1 ? "/" : "\\";
+    let parts = filePath.split(separator);
+    return parts[parts.length - 1];
+}
+
+
+function extractFileName2(filePath) {
+  if (typeof filePath !== 'string') {
+    throw new Error('filePath must be a string');
+  }
+
+  let separator = filePath.indexOf("/") !== -1 ? "/" : "\\";
+  let parts = filePath.split(separator);
+  let fileName = parts[parts.length - 1];
+
+  // Find the index of the first question mark
+  let questionMarkIndex = fileName.indexOf("?");
+
+  // If there is a question mark, remove everything from that index to the end of the string
+  if (questionMarkIndex !== -1) {
+    fileName = fileName.substring(0, questionMarkIndex);
+  }
+
+  return fileName;
+}
+
+---
+
+
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+    {
+      imageFiles.map((img) => (
+
+
+
+      <a href=`paintings/${extractFileName2(img.default.src)}`> 
+
+        <Image
+        src={img.default}
+        alt="Peinture abstraite"
+        class="mb-3 w-full rounded"
+      />
+
+      <p> {extractFileName2(img.default.src)} </p>
+        
+      </a>
+
+
+
+
+
+      ))
+    }
+</div>
+
+
+        <!-- 
+        <p> {extractFileName(img.default)} </p>
+        -->

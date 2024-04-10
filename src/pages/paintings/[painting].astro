@@ -1,0 +1,40 @@
+---
+import Gallery from '../../components/GalleryAbstrait.astro';
+import Modal from '../../components/Modal.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const pageTitle = "Gallerie de peintures abstraites"
+
+export function getStaticPaths() {
+  return [
+  {params: {painting:  'abs._8.JPG'}},
+    {params: {painting: 'abs-12.png'}},
+    {params: {painting: 'abs.14.png'}},
+    {params: {painting: 'abs.15.jpg'}},
+    {params: {painting:  'abs.16.jpg'}},
+
+    {params: {painting:  'Desordre-estival.jpg'}},
+
+    {params: {painting:  'larmonie_n1.jpg'}},
+    {params: {painting:  'Harmonie_n2.jpg'}},
+    {params: {painting:  'Harmonie_n3.jpg'}},
+    {params: {painting: 'Harmonie_n4.jpg'}},
+    {params: {painting:  'Harmonie_r.jpg'}},
+
+    {params: {painting: 'img2014.png'}},
+    {params: {painting: 'rose-bleu.JPG'}},
+]}
+
+const { painting } = Astro.params;
+
+---
+
+
+<BaseLayout pageTitle={pageTitle}>
+
+    <Gallery />
+    <Modal paintingName={painting}/>
+ 
+</BaseLayout>
+
+
